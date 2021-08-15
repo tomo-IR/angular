@@ -38,14 +38,22 @@
   type="checkbox"
   #ck1
   (change)="check(ck1.checked, ck2.checked, ck3.checked)"
+  checked
 />
 <input
   type="checkbox"
   #ck2
   (change)="check(ck1.checked, ck2.checked, ck3.checked)"
+  checked
 />
 <input
   type="checkbox"
   #ck3
   (change)="check(ck1.checked, ck2.checked, ck3.checked)"
+  checked
 />
+
+<p>TYPE:{{ myControl.value }}</p>
+<p>{{ me }}</p>
+<input type="text" [formControl]="myControl" />
+<button (click)="doClick()">click!!</button>

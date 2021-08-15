@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-hoge',
@@ -7,8 +8,6 @@ import { Component, OnInit } from '@angular/core';
   template: ` <p><{{ hog }}/p></p>`,
 })
 export class HogeComponent implements OnInit {
-  // styleClass: string;
-
   constructor() {}
   ngOnInit() {}
   title = 'Hello App';
@@ -22,8 +21,8 @@ export class HogeComponent implements OnInit {
   switch = 'one';
 
   data = ['1個目', '2個目', '3個目'];
-  m = 'false, false, false';
-  nowClass = { thin: false, large: false, frame: false };
+  m = 'true, true, true';
+  nowClass = { thin: true, large: true, frame: true };
   // message = 'ボタンをクリック';
   clickcount() {
     this.message = ++this.count + '回、クリックしました。';
@@ -38,10 +37,16 @@ export class HogeComponent implements OnInit {
   doSelect(v: any) {
     this.switch = v;
   }
-  check(c1: any, c2: any, c3: any) {
+  check(c1: boolean, c2: boolean, c3: boolean) {
     this.nowClass.thin = c1;
     this.nowClass.large = c2;
     this.nowClass.frame = c3;
     this.m = c1 + ',' + c2 + ',' + c3;
+  }
+  text1 = '';
+  myControl = new FormControl('ok');
+  me = '';
+  doClick() {
+    this.me = '「' + this.myControl.value + '」と書きましたね！';
   }
 }
