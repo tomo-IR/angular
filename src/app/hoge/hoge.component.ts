@@ -22,6 +22,8 @@ export class HogeComponent implements OnInit {
   switch = 'one';
 
   data = ['1個目', '2個目', '3個目'];
+  m = 'false, false, false';
+  nowClass = { thin: false, large: false, frame: false };
   // message = 'ボタンをクリック';
   clickcount() {
     this.message = ++this.count + '回、クリックしました。';
@@ -35,5 +37,11 @@ export class HogeComponent implements OnInit {
   }
   doSelect(v: any) {
     this.switch = v;
+  }
+  check(c1: any, c2: any, c3: any) {
+    this.nowClass.thin = c1;
+    this.nowClass.large = c2;
+    this.nowClass.frame = c3;
+    this.m = c1 + ',' + c2 + ',' + c3;
   }
 }

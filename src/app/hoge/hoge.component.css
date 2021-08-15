@@ -5,3 +5,13 @@ p {
   background-color: red;
   color: white;
 }
+
+.thin {
+  color: #999;
+}
+.large {
+  font-size: 30pt;
+}
+.frame {
+  border: solid 2px red;
+}

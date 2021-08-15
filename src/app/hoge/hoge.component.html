@@ -22,3 +22,30 @@
   <option>two</option>
   <option>three</option>
 </select>
+
+<p [style.font-size.pt]="36" [style.color]="'#F00'">
+  {{ message }}
+</p>
+<p [style.font-size.pt]="28" [style.color]="'#F99'">
+  {{ message }}
+</p>
+<p [style.font-size.pt]="20" [style.color]="'#Fcc'">
+  {{ message }}
+</p>
+
+<p [ngClass]="nowClass">ngClass:{{ m }}</p>
+<input
+  type="checkbox"
+  #ck1
+  (change)="check(ck1.checked, ck2.checked, ck3.checked)"
+/>
+<input
+  type="checkbox"
+  #ck2
+  (change)="check(ck1.checked, ck2.checked, ck3.checked)"
+/>
+<input
+  type="checkbox"
+  #ck3
+  (change)="check(ck1.checked, ck2.checked, ck3.checked)"
+/>
