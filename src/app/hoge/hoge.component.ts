@@ -17,6 +17,7 @@ export class HogeComponent implements OnInit {
   today = '今日';
   styleClass = 'red';
   count = 0;
+  visible = true;
   // message = 'ボタンをクリック';
   clickcount() {
     this.message = ++this.count + '回、クリックしました。';
@@ -24,5 +25,8 @@ export class HogeComponent implements OnInit {
   doType(val: string) {
     this.input = val;
     this.message = 'you type:' + this.input;
+  }
+  doclick() {
+    this.visible = !this.visible;
   }
 }
