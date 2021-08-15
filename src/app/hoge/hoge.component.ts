@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HogeComponent implements OnInit {
   // styleClass: string;
+
   constructor() {}
   ngOnInit() {}
   title = 'Hello App';
@@ -18,6 +19,9 @@ export class HogeComponent implements OnInit {
   styleClass = 'red';
   count = 0;
   visible = true;
+  switch = 'one';
+
+  data = ['1個目', '2個目', '3個目'];
   // message = 'ボタンをクリック';
   clickcount() {
     this.message = ++this.count + '回、クリックしました。';
@@ -28,5 +32,8 @@ export class HogeComponent implements OnInit {
   }
   doclick() {
     this.visible = !this.visible;
+  }
+  doSelect(v: any) {
+    this.switch = v;
   }
 }

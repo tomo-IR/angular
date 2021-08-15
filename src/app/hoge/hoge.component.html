@@ -7,3 +7,18 @@
 <input type="text" #field1 (keypress)="doType(field1.value)" />
 <p *ngIf="visible" (click)="doclick()" class="red">これはTRUEです。</p>
 <p *ngIf="visible == false" (click)="doclick()">これはFALSEです。</p>
+<ul>
+  <li *ngFor="let item of data">{{ item }}</li>
+</ul>
+
+<div [ngSwitch]="switch">
+  <p *ngSwitchCase="'one'">1</p>
+  <p *ngSwitchCase="'two'">2</p>
+  <p *ngSwitchCase="'three'">3</p>
+</div>
+
+<select #se1 (change)="doSelect(se1.value)">
+  <option>one</option>
+  <option>two</option>
+  <option>three</option>
+</select>
