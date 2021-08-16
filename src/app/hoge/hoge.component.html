@@ -58,6 +58,7 @@
 <input type="text" [formControl]="myControl" />
 <button (click)="doClick()">click!!</button>
 <p>{{ mm }}</p>
+<p>{{ n }}</p>
 <form [formGroup]="myFormControl" (ngSubmit)="onSubmit()">
   <table>
     <tr>
@@ -85,4 +86,10 @@
       </td>
     </tr>
   </table>
+</form>
+
+<p>{{ mmm }}</p>
+<form [formGroup]="myFormControl2" (ngSubmit)="onSubmit2()">
+  <label> <input type="checkbox" formControlName="control" />Check Box </label>
+  <input type="submit" value="click" />
 </form>

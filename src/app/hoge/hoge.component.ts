@@ -55,8 +55,18 @@ export class HogeComponent implements OnInit {
     mail: new FormControl(''),
     age: new FormControl(0),
   });
+  n = '名前';
   onSubmit() {
     let result = this.myFormControl.value;
     this.mm = JSON.stringify(result);
+    this.n = '名前' + this.myFormControl.value.name;
+  }
+  myFormControl2 = new FormGroup({
+    control: new FormControl(),
+  });
+  mmm = '';
+  onSubmit2() {
+    let result = this.myFormControl2.value;
+    this.mmm = JSON.stringify(result);
   }
 }
