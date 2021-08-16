@@ -19,6 +19,7 @@ export class HogeComponent implements OnInit {
   count = 0;
   visible = true;
   switch = 'one';
+  mm = 'FormControlを使う';
 
   data = ['1個目', '2個目', '3個目'];
   m = 'true, true, true';
@@ -48,5 +49,14 @@ export class HogeComponent implements OnInit {
   me = '';
   doClick() {
     this.me = '「' + this.myControl.value + '」と書きましたね！';
+  }
+  myFormControl = new FormGroup({
+    name: new FormControl(''),
+    mail: new FormControl(''),
+    age: new FormControl(0),
+  });
+  onSubmit() {
+    let result = this.myFormControl.value;
+    this.mm = JSON.stringify(result);
   }
 }
